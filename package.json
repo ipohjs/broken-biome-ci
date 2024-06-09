@@ -1,0 +1,55 @@
+{
+  "name": "broken-biome-ci",
+  "version": "0.0.1",
+  "description": "Broken biome ci",
+  "keywords": [
+    "biome",
+    "ci",
+    "biome-ci",
+    "broken-biome-ci"
+  ],
+  "homepage": "https://github.com/motss/broken-biome-ci",
+  "bugs": {
+    "url": "https://github.com/motss/broken-biome-ci/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:motss/broken-biome-ci.git"
+  },
+  "funding": "https://github.com/motss/broken-biome-ci?sponsor=1",
+  "license": "MIT",
+  "author": {
+    "name": "motss",
+    "email": "contact@motss.app",
+    "url": "https://github.com/motss"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.js",
+      "default": "./index.js",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.js",
+  "files": [
+    "./index.d.ts",
+    "./index.js"
+  ],
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "biome.ci": "biome ci",
+    "biome.check": "biome check --write",
+    "biome.clean": "biome clean"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "typescript": "^5.4.5"
+  },
+  "readme": "https://github.com/motss/broken-biome-ci/README.md",
+  "packageManager": "pnpm@9.1.4"
+}

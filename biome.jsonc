@@ -1,0 +1,153 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
+  "formatter": {
+    "attributePosition": "multiline",
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80
+  },
+  "css": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "double"
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "cssModules": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "attributePosition": "multiline",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "enabled": true,
+      "jsxQuoteStyle": "double",
+      "lineEnding": "lf",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingCommas": "es5"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "trailingCommas": "none"
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "allowComments": false,
+      "allowTrailingCommas": false
+    }
+  },
+  "vcs": {
+    "clientKind": "git",
+    "defaultBranch": "main",
+    "enabled": true,
+    "root": ".",
+    "useIgnoreFile": true
+  },
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "all": true
+      },
+      "complexity": {
+        "all": true,
+        "noStaticOnlyClass": "off",
+        "noUselessSwitchCase": "off",
+        "noExcessiveCognitiveComplexity": "off"
+      },
+      "correctness": {
+        "all": true
+      },
+      "nursery": {
+        "all": true,
+        "noConsole": "off",
+        "useImportRestrictions": "off"
+      },
+      "performance": {
+        "all": true
+      },
+      "security": {
+        "all": true
+      },
+      "style": {
+        "all": true,
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false
+          }
+        }
+      },
+      "suspicious": {
+        "all": true,
+        "useAwait": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": [
+        "commitlint.config.*js",
+        "eslint.config.*js",
+        "nano-staged.*js",
+        "vite.config.ts",
+        "vitest.workspace.ts"
+      ],
+      "linter": {
+        "enabled": true,
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": [
+        "eslint.config.*js"
+      ],
+      "linter": {
+        "enabled": true,
+        "rules": {
+          "nursery": {
+            "noUndeclaredDependencies": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": [
+        "src/**/*.test.ts*"
+      ],
+      "linter": {
+        "rules": {
+          "nursery": {
+            /**
+             * fixme: remove the override when [#3133] gets resolved.
+             *
+             * [#3133]: https://github.com/biomejs/biome/issues/3133
+             */
+            "useDateNow": "off"
+          }
+        }
+      }
+    }
+  ]
+}
