@@ -1,0 +1,32 @@
+# .gitignore 101 - https://www.quora.com/Does-gitignore-file-only-work-on-current-folder
+
+# dot files/ folders
+.*cache
+.build/
+.DS_Store
+.firebase/
+.nyc_output
+.tmp/
+.vscode/*
+*.env
+*.idea
+*.local
+*.log*
+*.tsbuildinfo
+*.turbo*
+
+# folders
+coverage*/
+dist*/
+log*/
+node_modules/
+web_modules/
+
+# .js files
+sw-precache*.js*
+workbox-*.js*
+
+# Do not ignore
+!.vscode/extensions.json
+!.vscode/settings.json
+!workbox-config.js
