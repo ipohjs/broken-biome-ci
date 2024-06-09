@@ -120,9 +120,7 @@
       }
     },
     {
-      "include": [
-        "eslint.config.*js"
-      ],
+      "include": ["eslint.config.*js"],
       "linter": {
         "enabled": true,
         "rules": {
@@ -133,9 +131,7 @@
       }
     },
     {
-      "include": [
-        "src/**/*.test.ts*"
-      ],
+      "include": ["src/**/*.test.ts*"],
       "linter": {
         "rules": {
           "nursery": {

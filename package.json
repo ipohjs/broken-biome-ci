@@ -2,12 +2,7 @@
   "name": "broken-biome-ci",
   "version": "0.0.1",
   "description": "Broken biome ci",
-  "keywords": [
-    "biome",
-    "ci",
-    "biome-ci",
-    "broken-biome-ci"
-  ],
+  "keywords": ["biome", "ci", "biome-ci", "broken-biome-ci"],
   "homepage": "https://github.com/motss/broken-biome-ci",
   "bugs": {
     "url": "https://github.com/motss/broken-biome-ci/issues"
@@ -34,13 +29,8 @@
   "main": "./index.js",
   "module": "./index.js",
   "types": "./index.js",
-  "files": [
-    "./index.d.ts",
-    "./index.js"
-  ],
-  "workspaces": [
-    "./packages/*"
-  ],
+  "files": ["./index.d.ts", "./index.js"],
+  "workspaces": ["./packages/*"],
   "scripts": {
     "biome.ci": "biome ci",
     "biome.check": "biome check --write",
