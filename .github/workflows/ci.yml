@@ -94,7 +94,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pnpm pkg delete scripts.postinstall
           pnpm install --frozen-lockfile
 
       - name: Biome
